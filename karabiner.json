@@ -4,6 +4,20 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Hyper + CapsLock 切换大写锁定",
+                        "manipulators": [
+                            {
+                                "conditions": [{ "name": "hyper", "type": "variable_if", "value": 1 }],
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": { "mandatory": ["control", "command", "option", "shift"] }
+                                },
+                                "to": [{ "key_code": "caps_lock" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Logitech G613: Cmd/Opt 互换, CapsLock 变 Ctrl, Ctrl 变 Hyper",
                         "manipulators": [
                             {
