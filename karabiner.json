@@ -7,10 +7,19 @@
                         "description": "Hyper + CapsLock 切换大写锁定",
                         "manipulators": [
                             {
-                                "conditions": [{ "name": "hyper", "type": "variable_if", "value": 1 }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "caps_lock",
-                                    "modifiers": { "mandatory": ["control", "command", "option", "shift"] }
+                                    "modifiers": {
+                                        "mandatory": ["control", "command", "option", "shift"],
+                                        "optional": ["caps_lock"]
+                                    }
                                 },
                                 "to": [{ "key_code": "caps_lock" }],
                                 "type": "basic"
@@ -77,7 +86,12 @@
                                     "key_code": "caps_lock",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "left_control", "lazy": true }],
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "lazy": true
+                                    }
+                                ],
                                 "to_if_alone": [{ "key_code": "escape" }],
                                 "type": "basic"
                             },
@@ -137,7 +151,12 @@
                                     "key_code": "caps_lock",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "left_control", "lazy": true }],
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "lazy": true
+                                    }
+                                ],
                                 "to_if_alone": [{ "key_code": "escape" }],
                                 "type": "basic"
                             },
